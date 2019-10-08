@@ -23,6 +23,7 @@
     <ClCompile Include="GarbageBox.cpp" />
     <ClCompile Include="GarbagePaper.cpp" />
     <ClCompile Include="GabageBotol.cpp" />
+    <ClCompile Include="GarbageBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -34,6 +35,7 @@
     <ClInclude Include="GarbagePaper.h" />
     <ClInclude Include="GabageBotol.h" />
     <ClInclude Include="GameCamera.h" />
+    <ClInclude Include="GarbageBase.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
