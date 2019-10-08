@@ -1766,6 +1766,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GarbageBox.cpp" />
     <ClCompile Include="GarbagePaper.cpp" />
+    <ClCompile Include="GameCamera.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -1791,6 +1792,7 @@
   <ItemGroup>
     <ClInclude Include="GabageBotol.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameCamera.h" />
     <ClInclude Include="GarbageBox.h" />
     <ClInclude Include="GarbagePaper.h" />
     <CLInclude Include="resource.h" />
