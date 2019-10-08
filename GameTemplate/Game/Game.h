@@ -4,6 +4,8 @@
 #include "tkEngine/physics/tkPhysicsGhostObject.h"
 #include "tkEngine/character/tkCharacterController.h"
 
+class GameCamera;
+class Player;
 class Game : public IGameObject
 {
 public:
@@ -11,6 +13,8 @@ public:
 	~Game();
 	bool Start();
 	void Update();
-	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
+
+	GameCamera* m_gc = nullptr;		//ゲームカメラのインスタンス
+	Player* m_pl = nullptr;			//プレイヤーのインスタンス
 };
 
