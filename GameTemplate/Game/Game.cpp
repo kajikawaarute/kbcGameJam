@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Game.h"
 #include "GameCamera.h"
+#include "Player.h"
 #include "tkEngine/light/tkDirectionLight.h"
 #include "GarbageBox.h"
 #include "GarbagePaper.h"
@@ -8,20 +9,20 @@
 
 Game::Game()
 {
-	NewGO<GameCamera>(0, "gc");
+	m_gc = NewGO<GameCamera>(0, "gc");
+	m_pl = NewGO<Player>(0, "pl");
 }
 
 
 Game::~Game()
 {
-	GameCamera* gc = FindGO<GameCamera>("gc");
-	DeleteGO(gc);
+	m_gc = FindGO<GameCamera>("gc");
+	DeleteGO(m_gc);
+	m_pl = FindGO<Player>("pl");
+	DeleteGO(m_pl);
 }
 bool Game::Start()
 {
-
-	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelRender->Init(L"modelData/unityChan.cmo");
 
 	m_paper = NewGO<GarbagePaper>(0, "Paper");
 	m_gabagebox = NewGO<GarbageBox>(0, "GarbageBox");
