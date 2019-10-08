@@ -24,9 +24,6 @@ Game::~Game()
 bool Game::Start()
 {
 
-	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelRender->Init(L"modelData/unityChan.cmo");
-
 	m_paper = NewGO<GarbagePaper>(0, "Paper");
 	m_gabagebox = NewGO<GarbageBox>(0, "GarbageBox");
 	//m_botol = NewGO<GabageBotol>(0, "Botol");
