@@ -1762,7 +1762,10 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GabageBotol.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GarbageBox.cpp" />
+    <ClCompile Include="GarbagePaper.cpp" />
     <ClCompile Include="GameCamera.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -1788,14 +1791,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GabageBotol.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameCamera.h" />
+    <ClInclude Include="GarbageBox.h" />
+    <ClInclude Include="GarbagePaper.h" />
     <ClInclude Include="Player.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
+    <MeshContentTask Include="Assets\modelData\GarbageBox.FBX" />
+    <MeshContentTask Include="Assets\modelData\Paper.FBX" />
+    <MeshContentTask Include="Assets\modelData\PetBotol.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
   </ItemGroup>
   <ItemGroup>

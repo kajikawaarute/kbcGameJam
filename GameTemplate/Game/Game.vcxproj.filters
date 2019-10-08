@@ -21,6 +21,9 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameCamera.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="GarbageBox.cpp" />
+    <ClCompile Include="GarbagePaper.cpp" />
+    <ClCompile Include="GabageBotol.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -28,6 +31,9 @@
     </CLInclude>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GarbageBox.h" />
+    <ClInclude Include="GarbagePaper.h" />
+    <ClInclude Include="GabageBotol.h" />
     <ClInclude Include="GameCamera.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
@@ -38,6 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\unityChan.fbx">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\GarbageBox.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\Paper.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\PetBotol.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>
