@@ -2,9 +2,23 @@
 #include "GarbagePaper.h"
 //#include "GarbageBase.h"
 #include "Player.h"
+//#include "Score.h"
+#include "GetGarbageCount.h"
+
+GarbagePaper::GarbagePaper()
+{
+
+}
+GarbagePaper::~GarbagePaper()
+{
+	DeleteGO(m_skinModelRender);
+}
 
 bool GarbagePaper::Start()
 {
+	//m_score = FindGO<Score>("score");
+	m_getGra = FindGO<GetGarbageCount>("ggc");
+
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/Paper.cmo");
 
@@ -22,8 +36,9 @@ void GarbagePaper::NearPlayer()
 
 	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 500.0f)
 	{
-		GarbageNewPos = m_position;
-		m_position = GarbageNewPos + m_player->m_position;
+		GetCount++;
+		m_getGra->Add_ScoreCount(GetCount);
+		DeleteGO(this);
 	}
 }
 void GarbagePaper::Update()

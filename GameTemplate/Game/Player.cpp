@@ -14,11 +14,25 @@ Player::~Player()
 
 bool Player::Start()
 {
+	//アニメーションクリップのロード
+	m_animationClip[enAnimationClip_Player_Idle].Load(L"animData/KBCjamPlayer/Player_Idle.tka");
+	m_animationClip[enAnimationClip_Player_Run].Load(L"animData/KBCjamPlayer/Player_Run.tka");
+	//ループフラグの設定
+	m_animationClip[enAnimationClip_Player_Idle].SetLoopFlag(false);
+	m_animationClip[enAnimationClip_Player_Run].SetLoopFlag(true);
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelRender->Init(L"modelData/unityChan.cmo");
+	m_skinModelRender->Init(L"modelData/KBCjam Player.cmo", m_animationClip, enAnimationClip_num, enFbxUpAxisZ);
 	m_charaCon.Init(50.0f, 90.0f, m_position);
 
 	return true;
+}
+
+void Player::AnimationController()
+{
+	//m_skinModelRender->PlayAnimation(enAnimationClip_Player_Idle, 0.0f);
+	if (Pad(0).GetLStickXF() || Pad(0).GetLStickYF()) {
+		m_skinModelRender->PlayAnimation(enAnimationClip_Player_Run, 0.0f);
+	}
 }
 
 void Player::Move()
@@ -43,7 +57,7 @@ void Player::Move()
 	m_moveSpeed += cameraFoward * LStick_y;
 	m_moveSpeed += cameraRight * LStick_x;
 
-	m_position = m_charaCon.Execute(m_moveSpeed);
+	m_position = m_charaCon.Execute(m_moveSpeed, GameTime().GetFrameDeltaTime());
 }
 
 void Player::Turn()
@@ -60,6 +74,7 @@ void Player::Update()
 {
 	Move();
 	Turn();
+	AnimationController();
 	m_skinModelRender->SetPosition(m_position);
 	m_skinModelRender->SetRotation(m_rotation);
 }

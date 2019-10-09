@@ -1,9 +1,13 @@
 #pragma once
 //class GarbageBase;
 class Player;
+//class Score;
+class GetGarbageCount;
 class GarbagePaper : public IGameObject
 {
 public:
+	GarbagePaper();
+	~GarbagePaper();
 	bool Start();
 	void NearPlayer();
 	void Update();
@@ -18,5 +22,8 @@ public:
 	CVector3 GarbageNewPos = CVector3::Zero;
 	prefab::CSkinModelRender* m_skinModelRender = nullptr; //スキンモデルレンダー
 	Player* m_player = nullptr;
+	//Score* m_score = nullptr;	//スコアのインスタンス
+	GetGarbageCount* m_getGra = nullptr;	//拾ったゴミカウントのインスタンス
+	int GetCount = 0;
 };
 

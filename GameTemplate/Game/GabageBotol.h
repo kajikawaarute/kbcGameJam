@@ -4,6 +4,8 @@ class Player;
 class GabageBotol : public IGameObject
 {
 public:
+	GabageBotol();
+	~GabageBotol();
 	bool Start();
 	void NearPlayer();
 	void Update();
