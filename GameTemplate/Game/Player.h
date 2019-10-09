@@ -7,6 +7,11 @@ public:
 	bool Start();
 	void Update();
 	void Move();
+	void Turn();
+	CVector3 GetPos()
+	{
+		return m_position;
+	}
 
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
 	CVector3 m_position = CVector3::Zero;						//座標
