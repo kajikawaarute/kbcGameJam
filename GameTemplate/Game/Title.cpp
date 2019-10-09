@@ -40,7 +40,8 @@ bool Title::Start()
 	
 
 	Font = NewGO<prefab::CFontRender>(0);
-	Font->SetText(L"GameStart");
+	int i = 5;
+	Font->SetText(L"GameStart"+i);
 	
 //	// エフェクト関係の処理
 //	prefab::CEffect* effect = NewGO<prefab::CEffect>(0);
