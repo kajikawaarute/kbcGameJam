@@ -19,7 +19,8 @@ bool GameCamera::Start()
 	MainCamera().SetPosition({ 0.0f, 70.0f, -200.0f });
 	MainCamera().Update();*/
 
-	m_toCameraPos.Set(0.0f, 250.0f, -400.0f);
+	//m_toCameraPos.Set(0.0f, 250.0f, -400.0f);
+	m_toCameraPos.Set(0.0f, 270.0f, -800.0f);
 	m_pl = FindGO<Player>("pl");
 	MainCamera().SetNear(10.0f);
 	MainCamera().SetFar(10000.0f);

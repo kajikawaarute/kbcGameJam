@@ -20,6 +20,9 @@
     <Filter Include="Assets\sound">
       <UniqueIdentifier>{a19714d9-460c-44d5-aa8f-27e15bb208ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\animData">
+      <UniqueIdentifier>{efb019e5-f19c-4f2a-87c9-8ccc694e6b81}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -67,6 +70,9 @@
     <MeshContentTask Include="Assets\modelData\PetBotol.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\KBCjam Player.fbx">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png">
@@ -82,6 +88,12 @@
   <ItemGroup>
     <CustomBuild Include="Assets\effect\fa.efk">
       <Filter>Assets\effect</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Idle.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Run.tka">
+      <Filter>Assets\animData</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

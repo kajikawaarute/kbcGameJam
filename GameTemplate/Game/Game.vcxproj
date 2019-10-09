@@ -1809,6 +1809,7 @@
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\GarbageBox.FBX" />
+    <MeshContentTask Include="Assets\modelData\KBCjam Player.fbx" />
     <MeshContentTask Include="Assets\modelData\Paper.FBX" />
     <MeshContentTask Include="Assets\modelData\PetBotol.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
@@ -1829,6 +1830,14 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\GAMESTARTsound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Idle.tka">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Run.tka">
+      <FileType>Document</FileType>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
