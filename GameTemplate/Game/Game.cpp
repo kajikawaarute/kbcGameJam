@@ -7,7 +7,7 @@
 #include "GarbagePaper.h"
 #include "GabageBotol.h"
 #include "Title.h"
-
+#include "Stage.h"
 
 
 
@@ -15,6 +15,8 @@ Game::Game()
 {
 	m_gc = NewGO<GameCamera>(0, "gc");
 	m_pl = NewGO<Player>(0, "pl");
+	m_stage = NewGO<Stage>(0, "stage01");
+
 }
 
 
@@ -24,6 +26,8 @@ Game::~Game()
 	DeleteGO(m_gc);
 	m_pl = FindGO<Player>("pl");
 	DeleteGO(m_pl);
+	m_stage = FindGO<Stage>("stage01");
+	DeleteGO(m_stage);
 
 
 	
