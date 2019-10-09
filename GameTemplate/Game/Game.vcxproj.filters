@@ -31,6 +31,8 @@
     <ClCompile Include="GarbageBox.cpp" />
     <ClCompile Include="GarbagePaper.cpp" />
     <ClCompile Include="GabageBotol.cpp" />
+    <ClCompile Include="Score.cpp" />
+    <ClCompile Include="GetGarbageCount.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -44,6 +46,8 @@
     <ClInclude Include="GabageBotol.h" />
     <ClInclude Include="GameCamera.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Score.h" />
+    <ClInclude Include="GetGarbageCount.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">

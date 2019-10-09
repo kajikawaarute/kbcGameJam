@@ -7,7 +7,8 @@
 #include "GarbagePaper.h"
 #include "GabageBotol.h"
 #include "Title.h"
-
+#include  "Score.h"
+#include "GetGarbageCount.h"
 
 
 
@@ -15,6 +16,8 @@ Game::Game()
 {
 	m_gc = NewGO<GameCamera>(0, "gc");
 	m_pl = NewGO<Player>(0, "pl");
+	m_score = NewGO<Score>(0, "score");
+	m_getGraCount = NewGO<GetGarbageCount>(0, "ggc");
 }
 
 
@@ -24,8 +27,10 @@ Game::~Game()
 	DeleteGO(m_gc);
 	m_pl = FindGO<Player>("pl");
 	DeleteGO(m_pl);
-
-
+	m_score = FindGO<Score>("score");
+	DeleteGO(m_score);
+	m_getGraCount = FindGO<GetGarbageCount>("ggc");
+	DeleteGO(m_getGraCount);
 	
 
 	Title* TL = FindGO<Title>("Title1");

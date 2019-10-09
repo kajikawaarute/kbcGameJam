@@ -9,6 +9,8 @@ class GarbagePaper;
 class GabageBotol;
 class GameCamera;
 class Player;
+class Score;
+class GetGarbageCount;
 class Game : public IGameObject
 {
 public:
@@ -22,5 +24,7 @@ public:
 
 	GameCamera* m_gc = nullptr;		//ゲームカメラのインスタンス
 	Player* m_pl = nullptr;			//プレイヤーのインスタンス
+	Score* m_score = nullptr;		//スコアのインスタンス
+	GetGarbageCount* m_getGraCount = nullptr;	//
 };
 

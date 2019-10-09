@@ -2,6 +2,9 @@
 #include "GarbagePaper.h"
 //#include "GarbageBase.h"
 #include "Player.h"
+//#include "Score.h"
+#include "GetGarbageCount.h"
+
 GarbagePaper::GarbagePaper()
 {
 
@@ -13,6 +16,9 @@ GarbagePaper::~GarbagePaper()
 
 bool GarbagePaper::Start()
 {
+	//m_score = FindGO<Score>("score");
+	m_getGra = FindGO<GetGarbageCount>("ggc");
+
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/Paper.cmo");
 
@@ -30,6 +36,8 @@ void GarbagePaper::NearPlayer()
 
 	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 500.0f)
 	{
+		GetCount++;
+		m_getGra->Add_ScoreCount(GetCount);
 		DeleteGO(this);
 	}
 }
