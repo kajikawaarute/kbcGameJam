@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "Player.h"
+#include "GabageBotol.h"
+#include "GarbagePaper.h"
 
 Player::Player()
 {
@@ -52,6 +54,7 @@ void Player::Turn()
 	float angle = atan2(m_moveSpeed.x, m_moveSpeed.z);
 	m_rotation.SetRotation(CVector3::AxisY, angle);
 }
+
 
 void Player::Update()
 {

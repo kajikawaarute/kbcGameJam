@@ -1,4 +1,5 @@
 #pragma once
+
 class Player : public IGameObject
 {
 public:
@@ -8,6 +9,7 @@ public:
 	void Update();
 	void Move();
 	void Turn();
+	
 	CVector3 GetPos()
 	{
 		return m_position;
@@ -18,5 +20,6 @@ public:
 	CVector3 m_moveSpeed = CVector3::Zero;						//移動速度
 	CQuaternion m_rotation = CQuaternion::Identity;				//回転
 	CCharacterController m_charaCon;							//キャラクターコントローラー
+	
 };
 

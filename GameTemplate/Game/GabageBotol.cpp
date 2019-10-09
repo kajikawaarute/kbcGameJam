@@ -19,7 +19,7 @@ void GabageBotol::NearPlayer()
 	}
 	CVector3 PlGarbage = m_player->m_position - m_position;
 
-	if (PlGarbage.Length() < 500.0f)
+	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 500.0f)
 	{
 		GarbageNewPos = m_position;
 		m_position = GarbageNewPos + m_player->m_position;
