@@ -1,6 +1,11 @@
 #include "stdafx.h"
 #include "Game.h"
+#include "GameCamera.h"
+#include "Player.h"
 #include "tkEngine/light/tkDirectionLight.h"
+#include "GarbageBox.h"
+#include "GarbagePaper.h"
+#include "GabageBotol.h"
 #include "Title.h"
 
 
@@ -8,15 +13,17 @@
 
 Game::Game()
 {
-
-	//NewGO<Title>(0, "Title1");
-	
-
+	m_gc = NewGO<GameCamera>(0, "gc");
+	m_pl = NewGO<Player>(0, "pl");
 }
 
 
 Game::~Game()
 {
+	m_gc = FindGO<GameCamera>("gc");
+	DeleteGO(m_gc);
+	m_pl = FindGO<Player>("pl");
+	DeleteGO(m_pl);
 
 
 	
@@ -29,15 +36,10 @@ Game::~Game()
 }
 bool Game::Start()
 {
-	//ÉJÉÅÉâÇê›íËÅB
-	MainCamera().SetTarget({ 0.0f, 70.0f, 0.0f });
-	MainCamera().SetNear(10.0f);
-	MainCamera().SetFar(10000.0f);
-	MainCamera().SetPosition({ 0.0f, 70.0f, 200.0f });
-	MainCamera().Update();
-	m_skinModelRender = NewGO<prefab::CSkinModelRender>(1);
-	m_skinModelRender->Init(L"modelData/unityChan.cmo");
-	
+
+	//m_paper = NewGO<GarbagePaper>(0, "Paper");
+	m_gabagebox = NewGO<GarbageBox>(0, "GarbageBox");
+	m_botol = NewGO<GabageBotol>(0, "Botol");
 	return true;
 }
 
