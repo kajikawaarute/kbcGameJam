@@ -14,7 +14,7 @@ bool GabageBotol::Start()
 {
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/PetBotol.cmo");
-
+	m_position = { 300.0f, 0.0f, 500.0f };
 	m_skinModelRender->SetScale(m_scale);
 	return true;
 }

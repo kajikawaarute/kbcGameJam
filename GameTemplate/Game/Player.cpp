@@ -17,9 +17,11 @@ bool Player::Start()
 	//アニメーションクリップのロード
 	m_animationClip[enAnimationClip_Player_Idle].Load(L"animData/KBCjamPlayer/Player_Idle.tka");
 	m_animationClip[enAnimationClip_Player_Run].Load(L"animData/KBCjamPlayer/Player_Run.tka");
+	m_animationClip[enAnimationClip_Player_Gomihiroi].Load(L"animData/KBCjamPlayer/Player_Gomihiroi.tka");
 	//ループフラグの設定
 	m_animationClip[enAnimationClip_Player_Idle].SetLoopFlag(false);
 	m_animationClip[enAnimationClip_Player_Run].SetLoopFlag(true);
+	m_animationClip[enAnimationClip_Player_Gomihiroi].SetLoopFlag(false);
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/KBCjam Player.cmo", m_animationClip, enAnimationClip_num, enFbxUpAxisZ);
 	m_charaCon.Init(50.0f, 90.0f, m_position);
@@ -29,10 +31,28 @@ bool Player::Start()
 
 void Player::AnimationController()
 {
-	//m_skinModelRender->PlayAnimation(enAnimationClip_Player_Idle, 0.0f);
-	if (Pad(0).GetLStickXF() || Pad(0).GetLStickYF()) {
-		m_skinModelRender->PlayAnimation(enAnimationClip_Player_Run, 0.0f);
+	
+	
+	if (ChangeHIroiMo == 0) {
+		if (Pad(0).GetLStickXF() || Pad(0).GetLStickYF()) {
+			m_skinModelRender->PlayAnimation(enAnimationClip_Player_Run, 0.0f);
+		}
+		else {
+			//m_skinModelRender->PlayAnimation(enAnimationClip_Player_Idle, 0.0f);
+		}
+		if (Pad(0).IsTrigger(enButtonA))
+		{
+			m_skinModelRender->PlayAnimation(enAnimationClip_Player_Gomihiroi, 0.0f);
+			//ChangeHIroiMo = 1;
+		}
+		
 	}
+	/*if (ChangeHIroiMo == 1)
+	{
+		m_skinModelRender->PlayAnimation(enAnimationClip_Player_Gomihiroi, 0.0f);
+		
+	}
+	ChangeHIroiMo = 0;*/
 }
 
 void Player::Move()

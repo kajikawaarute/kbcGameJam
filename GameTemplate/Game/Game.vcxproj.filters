@@ -95,6 +95,9 @@
     <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Run.tka">
       <Filter>Assets\animData</Filter>
     </CustomBuild>
+    <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Gomihiroi.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\GAMESTARTsound.wav">

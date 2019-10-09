@@ -19,6 +19,7 @@ public:
 	enum EnAnimationClip {
 		enAnimationClip_Player_Idle,
 		enAnimationClip_Player_Run,
+		enAnimationClip_Player_Gomihiroi,
 		enAnimationClip_num
 	};
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
@@ -28,6 +29,8 @@ public:
 	CCharacterController m_charaCon;							//キャラクターコントローラー
 
 	CAnimationClip m_animationClip[enAnimationClip_num];	//アニメーションクリップ。
+
+	int ChangeHIroiMo = 0;
 	
 };
 
