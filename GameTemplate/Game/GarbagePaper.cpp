@@ -2,6 +2,14 @@
 #include "GarbagePaper.h"
 //#include "GarbageBase.h"
 #include "Player.h"
+GarbagePaper::GarbagePaper()
+{
+
+}
+GarbagePaper::~GarbagePaper()
+{
+	DeleteGO(m_skinModelRender);
+}
 
 bool GarbagePaper::Start()
 {
@@ -22,8 +30,7 @@ void GarbagePaper::NearPlayer()
 
 	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 500.0f)
 	{
-		GarbageNewPos = m_position;
-		m_position = GarbageNewPos + m_player->m_position;
+		DeleteGO(this);
 	}
 }
 void GarbagePaper::Update()

@@ -20,13 +20,16 @@ Game::~Game()
 	DeleteGO(m_gc);
 	m_pl = FindGO<Player>("pl");
 	DeleteGO(m_pl);
+	DeleteGOs("GarbageBox");
+	DeleteGOs("Botol");
+	DeleteGOs("Paper");
 }
 bool Game::Start()
 {
 
-	//m_paper = NewGO<GarbagePaper>(0, "Paper");
+	m_paper = NewGO<GarbagePaper>(0, "Paper");
 	m_gabagebox = NewGO<GarbageBox>(0, "GarbageBox");
-	m_botol = NewGO<GabageBotol>(0, "Botol");
+	//m_botol = NewGO<GabageBotol>(0, "Botol");
 	return true;
 }
 

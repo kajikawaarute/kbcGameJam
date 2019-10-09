@@ -4,6 +4,8 @@ class Player;
 class GarbagePaper : public IGameObject
 {
 public:
+	GarbagePaper();
+	~GarbagePaper();
 	bool Start();
 	void NearPlayer();
 	void Update();

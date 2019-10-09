@@ -2,6 +2,14 @@
 #include "GabageBotol.h"
 //#include "GarbageBase.h"
 #include "Player.h"
+GabageBotol::GabageBotol()
+{
+
+}
+GabageBotol::~GabageBotol()
+{
+	DeleteGO(m_skinModelRender);
+}
 bool GabageBotol::Start()
 {
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
@@ -21,8 +29,7 @@ void GabageBotol::NearPlayer()
 
 	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 500.0f)
 	{
-		GarbageNewPos = m_position;
-		m_position = GarbageNewPos + m_player->m_position;
+		DeleteGO(this);
 	}
 }
 
