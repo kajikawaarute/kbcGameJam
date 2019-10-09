@@ -6,6 +6,10 @@
 #include "GarbageBox.h"
 #include "GarbagePaper.h"
 #include "GabageBotol.h"
+#include "Title.h"
+
+
+
 
 Game::Game()
 {
@@ -20,6 +24,15 @@ Game::~Game()
 	DeleteGO(m_gc);
 	m_pl = FindGO<Player>("pl");
 	DeleteGO(m_pl);
+
+
+	
+
+	Title* TL = FindGO<Title>("Title1");
+	DeleteGO(TL);
+
+	
+
 	DeleteGOs("GarbageBox");
 	DeleteGOs("Botol");
 	DeleteGOs("Paper");

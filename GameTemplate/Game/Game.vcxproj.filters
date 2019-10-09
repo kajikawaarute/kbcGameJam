@@ -14,11 +14,18 @@
     <Filter Include="Assets\sprite">
       <UniqueIdentifier>{a6ce300a-b532-440d-b914-b4661d3015ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\effect">
+      <UniqueIdentifier>{f0cd6d1b-ccd1-4f55-b54e-d3c12ede3507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\sound">
+      <UniqueIdentifier>{a19714d9-460c-44d5-aa8f-27e15bb208ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Title.cpp" />
     <ClCompile Include="GameCamera.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="GarbageBox.cpp" />
@@ -31,6 +38,7 @@
     </CLInclude>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Title.h" />
     <ClInclude Include="GarbageBox.h" />
     <ClInclude Include="GarbagePaper.h" />
     <ClInclude Include="GabageBotol.h" />
@@ -60,5 +68,21 @@
     <ImageContentTask Include="Assets\sprite\dummy.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\Title1.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\GameStart.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Assets\effect\fa.efk">
+      <Filter>Assets\effect</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\sound\GAMESTARTsound.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>
