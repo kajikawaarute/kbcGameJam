@@ -27,11 +27,17 @@ bool Title::Start()
 	m_soundsource = NewGO<prefab::CSoundSource>(0);
 
 
+
 	m_spriteRender->Init(L"sprite/Title1.dds", 1270.0f, 720.0f);
-	m_spriteRender1->Init(L"sprite/GameStart.dds",420.0f,420.0f);
+	m_spriteRender1->Init(L"sprite/plse.dds",1270.0f,1270.0f);
+	
+	//CVector2 pos = { 0.0f,1.0f};
+
+	m_spriteRender1->SetPosition({0.0f, -200.0f, 0.0f});
+
 
 	m_soundsource->Init(L"sound/GAMESTARTsound.wav");
-
+	
 
 	Font = NewGO<prefab::CFontRender>(0);
 	Font->SetText(L"GameStart");

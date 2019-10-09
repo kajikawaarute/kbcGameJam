@@ -14,7 +14,7 @@ prefab::CSpriteRender* m_spriteRender1 = nullptr;
 prefab::CSoundSource* m_soundsource = nullptr;
 
 
-	CVector2 m_position = {1, 0};
+	CVector2 m_position = {0, 0};
 	CVector3 m_color = {1.0f,0.0f,0.0f};
 
 	int m_timer = 0;
