@@ -1763,6 +1763,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GabageBotol.cpp" />
+    <ClCompile Include="GabageGenerator.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GarbageBox.cpp" />
     <ClCompile Include="GarbagePaper.cpp" />
@@ -1793,10 +1794,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview_Middle|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview_Low|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GabageBotol.h" />
+    <ClInclude Include="GabageGenerator.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameCamera.h" />
     <ClInclude Include="GarbageBox.h" />
@@ -1808,6 +1811,7 @@
     <ClInclude Include="Score.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Title.h" />
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
@@ -1815,6 +1819,7 @@
     <MeshContentTask Include="Assets\modelData\da.fbx" />
     <MeshContentTask Include="Assets\modelData\GarbageBox.FBX" />
     <MeshContentTask Include="Assets\modelData\KBCjam Player.fbx" />
+    <MeshContentTask Include="Assets\modelData\KBCjam Stage.FBX" />
     <MeshContentTask Include="Assets\modelData\Paper.FBX" />
     <MeshContentTask Include="Assets\modelData\PetBotol.FBX" />
     <MeshContentTask Include="Assets\modelData\stage.fbx" />
@@ -1852,6 +1857,14 @@
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\result01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Gomihiroi.tka">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\level\KBCjam_StageLevel.tkl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

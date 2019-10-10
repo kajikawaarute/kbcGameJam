@@ -23,6 +23,9 @@
     <Filter Include="Assets\animData">
       <UniqueIdentifier>{efb019e5-f19c-4f2a-87c9-8ccc694e6b81}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\level">
+      <UniqueIdentifier>{14b29549-728a-400e-aad6-9e5b115a7813}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -38,6 +41,8 @@
     <ClCompile Include="GetGarbageCount.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="Result.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="GabageGenerator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -54,6 +59,8 @@
     <ClInclude Include="Score.h" />
     <ClInclude Include="GetGarbageCount.h" />
     <ClInclude Include="Stage.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="GabageGenerator.h" />
     <ClInclude Include="Result.h" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +96,9 @@
     <MeshContentTask Include="Assets\modelData\da.fbx">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\KBCjam Stage.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png">
@@ -117,10 +127,18 @@
     <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Run.tka">
       <Filter>Assets\animData</Filter>
     </CustomBuild>
+    <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Gomihiroi.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\GAMESTARTsound.wav">
       <Filter>Assets\sound</Filter>
     </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\level\KBCjam_StageLevel.tkl">
+      <Filter>Assets\level</Filter>
+    </None>
   </ItemGroup>
 </Project>
