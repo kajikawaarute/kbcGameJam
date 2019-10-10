@@ -6,9 +6,15 @@ class GetGarbageCount;
 class GarbageBox : public IGameObject
 {
 public:
+
+	~GarbageBox();
+
+
 	bool Start();
 
 	void Update();
+
+
 
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_scale = CVector3::One;

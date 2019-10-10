@@ -140,5 +140,11 @@
     <None Include="Assets\level\KBCjam_StageLevel.tkl">
       <Filter>Assets\level</Filter>
     </None>
+    <None Include="Assets\effect\fubuki.efk">
+      <Filter>Assets\effect</Filter>
+    </None>
+    <None Include="Assets\effect\fucukikai.efk">
+      <Filter>Assets\effect</Filter>
+    </None>
   </ItemGroup>
 </Project>

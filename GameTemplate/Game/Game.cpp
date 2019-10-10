@@ -11,7 +11,8 @@
 #include "GetGarbageCount.h"
 #include "Stage.h"
 #include "Timer.h"
-
+#include "GabageGenerator.h"
+#include "Result.h"
 
 Game::Game()
 {
@@ -63,6 +64,7 @@ Game::Game()
 		return false;
 	});
 
+	m_generator = NewGO<GabageGenerator>(0, "Generator");
 	m_stage = NewGO<Stage>(0, "stage01");
 	m_timer = NewGO<Timer>(0, "timer");
 }
@@ -86,14 +88,15 @@ Game::~Game()
 
 	DeleteGO(m_dirLight);
 
-	Title* TL = FindGO<Title>("Title1");
-	DeleteGO(TL);
+	//Title* TL = FindGO<Title>("Title1");
+	//DeleteGO(TL);
 
 	
 
 	DeleteGOs("GarbageBox");
 	DeleteGOs("Botol");
 	DeleteGOs("Paper");
+	DeleteGOs("Generator");
 }
 bool Game::Start()
 {
@@ -106,4 +109,14 @@ bool Game::Start()
 
 void Game::Update()
 {
+	if (m_timer->m_timer <= 0.5) {
+		m_clearFlag = true;
+
+
+	}
+
+	if (m_clearFlag==true) {
+		NewGO<Result>(0);
+		DeleteGO(this);
+	}
 }

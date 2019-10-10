@@ -2,6 +2,8 @@
 class GetGarbageCount : public IGameObject
 {
 public:
+	GetGarbageCount();
+	~GetGarbageCount();
 	bool Start();
 	void Update();
 
