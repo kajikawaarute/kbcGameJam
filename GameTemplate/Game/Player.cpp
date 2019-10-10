@@ -58,8 +58,8 @@ void Player::AnimationController()
 
 void Player::Move()
 {
-	float LStick_x = Pad(0).GetLStickXF() * 600.0f;
-	float LStick_y = Pad(0).GetLStickYF() * 600.0f;
+	float LStick_x = Pad(0).GetLStickXF() * 800.0f;
+	float LStick_y = Pad(0).GetLStickYF() * 800.0f;
 
 	//ƒJƒƒ‰‚Ì‘O•ûŒü‚Æ‰E•ûŒü‚ğæ“¾
 	CVector3 cameraFoward = MainCamera().GetForward();

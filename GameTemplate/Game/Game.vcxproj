@@ -1771,6 +1771,7 @@
     <ClCompile Include="GetGarbageCount.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Result.cpp" />
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -1806,6 +1807,7 @@
     <ClInclude Include="GetGarbageCount.h" />
     <ClInclude Include="Player.h" />
     <CLInclude Include="resource.h" />
+    <ClInclude Include="Result.h" />
     <ClInclude Include="Score.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="stdafx.h" />
@@ -1854,11 +1856,16 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\result01.png" />
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Gomihiroi.tka">
       <FileType>Document</FileType>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\effect\fubuki.efk" />
+    <None Include="Assets\effect\fucukikai.efk" />
     <None Include="Assets\level\KBCjam_StageLevel.tkl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

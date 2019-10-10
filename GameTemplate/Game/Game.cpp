@@ -12,7 +12,7 @@
 #include "Stage.h"
 #include "Timer.h"
 #include "GabageGenerator.h"
-
+#include "Result.h"
 
 Game::Game()
 {
@@ -88,8 +88,8 @@ Game::~Game()
 
 	DeleteGO(m_dirLight);
 
-	Title* TL = FindGO<Title>("Title1");
-	DeleteGO(TL);
+	//Title* TL = FindGO<Title>("Title1");
+	//DeleteGO(TL);
 
 	
 
@@ -109,4 +109,14 @@ bool Game::Start()
 
 void Game::Update()
 {
+	if (m_timer->m_timer <= 0.5) {
+		m_clearFlag = true;
+
+
+	}
+
+	if (m_clearFlag==true) {
+		NewGO<Result>(0);
+		DeleteGO(this);
+	}
 }
