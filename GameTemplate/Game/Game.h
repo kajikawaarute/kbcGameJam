@@ -36,5 +36,7 @@ public:
 	CLevel m_level;                 //レベル
 	GetGarbageCount* m_getGraCount = nullptr;	//拾ったゴミカウントのインスタンス
 	Timer* m_timer = nullptr;		//タイマーのインスタンス
+	prefab::CDirectionLight* m_dirLight = nullptr;		//ディレクションライトのインスタンス
+	prefab::CDirectionLight* m_dirLight2 = nullptr;		//ディレクションライト2のインスタンス
 };
 
