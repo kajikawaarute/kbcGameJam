@@ -1763,6 +1763,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GabageBotol.cpp" />
+    <ClCompile Include="GabageGenerator.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GarbageBox.cpp" />
     <ClCompile Include="GarbagePaper.cpp" />
@@ -1797,6 +1798,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GabageBotol.h" />
+    <ClInclude Include="GabageGenerator.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameCamera.h" />
     <ClInclude Include="GarbageBox.h" />
