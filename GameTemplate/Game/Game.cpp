@@ -19,8 +19,19 @@ Game::Game()
 	m_pl = NewGO<Player>(0, "pl");
 	m_score = NewGO<Score>(0, "score");
 	m_getGraCount = NewGO<GetGarbageCount>(0, "ggc");
+	m_dirLight = NewGO <prefab::CDirectionLight>(0);
+	m_dirLight2 = NewGO <prefab::CDirectionLight>(0);
 	//m_stage = NewGO<Stage>(0, "stage01");
 	
+	//ディレクションライトを設定
+	m_dirLight->SetDirection({ -0.707f, -0.707f, 0.707f});
+	m_dirLight->SetColor({ 1000.0f, 1000.0f, 1000.0f, 1.0f });
+	GraphicsEngine().GetShadowMap().SetLightDirection({ 1.0f, 0.0f, 1.0f });
+
+	m_dirLight2->SetDirection({ 0.707f, 0.707f, -0.707f });
+	m_dirLight2->SetColor({ 1000.0f, 1000.0f, 1000.0f, 1.0f });
+	GraphicsEngine().GetShadowMap().SetLightDirection({ 0.0f, 1.0f, 0.0f });
+
 	//レベルの構築
 	m_level.Init(L"level/KBCjam_StageLevel.tkl", [&](LevelObjectData& objData) {
 		if (objData.EqualObjectName(L"GarbageBox") == true) {
@@ -73,6 +84,7 @@ Game::~Game()
 	m_stage = FindGO<Stage>("stage01");
 	DeleteGO(m_stage);
 
+	DeleteGO(m_dirLight);
 
 	Title* TL = FindGO<Title>("Title1");
 	DeleteGO(TL);
