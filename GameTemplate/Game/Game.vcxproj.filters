@@ -40,7 +40,9 @@
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="GetGarbageCount.cpp" />
     <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="Result.cpp" />
     <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="GabageGenerator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -58,6 +60,8 @@
     <ClInclude Include="GetGarbageCount.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="GabageGenerator.h" />
+    <ClInclude Include="Result.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -107,6 +111,9 @@
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
     <ImageContentTask Include="Assets\sprite\plse.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\result01.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
   </ItemGroup>

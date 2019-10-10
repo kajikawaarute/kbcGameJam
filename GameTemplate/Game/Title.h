@@ -30,6 +30,16 @@ prefab::CSoundSource* m_soundsource = nullptr;
 	void Update();
 
 
+	float x = 0;
+	float y = 60;
+	float yT = 0;
+	float ySpeed = 0.0f;
+	float Newton = - 0.5f;
+
+	int getcount = 0;
+	int getcount2 = 0;
+
+
 
 };
 

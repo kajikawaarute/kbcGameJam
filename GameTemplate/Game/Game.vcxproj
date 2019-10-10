@@ -1763,6 +1763,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GabageBotol.cpp" />
+    <ClCompile Include="GabageGenerator.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GarbageBox.cpp" />
     <ClCompile Include="GarbagePaper.cpp" />
@@ -1770,6 +1771,7 @@
     <ClCompile Include="GetGarbageCount.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Result.cpp" />
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -1797,6 +1799,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GabageBotol.h" />
+    <ClInclude Include="GabageGenerator.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameCamera.h" />
     <ClInclude Include="GarbageBox.h" />
@@ -1804,6 +1807,7 @@
     <ClInclude Include="GetGarbageCount.h" />
     <ClInclude Include="Player.h" />
     <CLInclude Include="resource.h" />
+    <ClInclude Include="Result.h" />
     <ClInclude Include="Score.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="stdafx.h" />
@@ -1850,6 +1854,9 @@
     <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Run.tka">
       <FileType>Document</FileType>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\result01.png" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Gomihiroi.tka">
