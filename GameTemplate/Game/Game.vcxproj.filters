@@ -103,6 +103,9 @@
     <ImageContentTask Include="Assets\sprite\plse.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\result01.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Assets\effect\fa.efk">
