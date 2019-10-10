@@ -4,6 +4,13 @@
 #include "Score.h"
 #include "GetGarbageCount.h"
 
+GarbageBox::~GarbageBox()
+{
+
+	DeleteGO(m_skinModelRender);
+
+}
+
 bool GarbageBox::Start()
 {
 

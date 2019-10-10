@@ -8,7 +8,7 @@ public:
 	void Update();
 
 	prefab::CFontRender* m_font = nullptr;
-	float m_timer = 30;
+	float m_timer = 2;
 	
 
 };

@@ -13,10 +13,10 @@ Result::~Result()
 {
 
 	DeleteGO(m_spriterender);
-	DeleteGO(m_spriterender1);
-	DeleteGO(m_spriterender2);
+	/*DeleteGO(m_spriterender1);
+	DeleteGO(m_spriterender2);*/
 	DeleteGO(Font1);
-	DeleteGO(m_ef);
+	//DeleteGO(m_ef);
 
 
 }
@@ -27,8 +27,10 @@ bool Result::Start()
 	
 	
 
-
-	m_score = FindGO<Score>("score");
+	if (m_score == nullptr) {
+		m_score = FindGO<Score>("score");
+	}
+	
 	//int a = m_score->m_score;
 
 m_spriterender = NewGO<prefab::CSpriteRender>(0);
