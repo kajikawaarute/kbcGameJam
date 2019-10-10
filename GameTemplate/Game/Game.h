@@ -14,7 +14,7 @@ class Score;
 class GetGarbageCount;
 class Stage;
 class Timer;
-
+class GabageGenerator;
 class Game : public IGameObject
 {
 public:
@@ -25,7 +25,7 @@ public:
 	//GarbageBox* m_gabagebox = nullptr;
 	GarbagePaper* m_paper = nullptr;
 	//GabageBotol* m_botol = nullptr;
-
+	GabageGenerator* m_generator = nullptr;  //ゴミジェネレーターのインスタンス
 
 	Stage* m_stage = nullptr;
 

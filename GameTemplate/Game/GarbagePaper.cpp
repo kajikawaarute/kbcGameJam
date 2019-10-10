@@ -22,7 +22,7 @@ bool GarbagePaper::Start()
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/Paper.cmo");
 
-	m_skinModelRender->SetScale(m_scale);
+	
 	return true;
 }
 
@@ -44,6 +44,7 @@ void GarbagePaper::NearPlayer()
 void GarbagePaper::Update()
 {
 	NearPlayer();
+	m_skinModelRender->SetScale(m_scale);
 	m_skinModelRender->SetPosition(m_position);
 	m_skinModelRender->SetRotation(m_rotation);
 }
