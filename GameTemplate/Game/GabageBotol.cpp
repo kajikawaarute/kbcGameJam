@@ -2,6 +2,7 @@
 #include "GabageBotol.h"
 //#include "GarbageBase.h"
 #include "Player.h"
+#include "GetGarbageCount.h"
 GabageBotol::GabageBotol()
 {
 
@@ -16,6 +17,8 @@ bool GabageBotol::Start()
 	m_skinModelRender->Init(L"modelData/PetBotol.cmo");
 	m_position = { 300.0f, 0.0f, 500.0f };
 	m_skinModelRender->SetScale(m_scale);
+
+	m_getGra = FindGO<GetGarbageCount>("ggc");
 	return true;
 }
 
@@ -29,6 +32,8 @@ void GabageBotol::NearPlayer()
 
 	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 500.0f)
 	{
+		GetCount++;
+		m_getGra->Add_GarbageCount(GetCount);
 		DeleteGO(this);
 	}
 }

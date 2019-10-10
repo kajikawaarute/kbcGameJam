@@ -5,7 +5,7 @@ public:
 	bool Start();
 	void Update();
 
-	void Add_ScoreCount(int count)
+	void Add_GarbageCount(int count)
 	{
 		m_GetCount += count;
 	}

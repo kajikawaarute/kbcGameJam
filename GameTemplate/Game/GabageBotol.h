@@ -1,6 +1,7 @@
 #pragma once
 //class GarbageBase;
 class Player;
+class GetGarbageCount;
 class GabageBotol : public IGameObject
 {
 public:
@@ -16,6 +17,8 @@ public:
 	CVector3 GarbageNewPos = CVector3::Zero;
 	prefab::CSkinModelRender* m_skinModelRender = nullptr; //スキンモデルレンダー
 	Player *m_player = nullptr;
+	GetGarbageCount* m_getGra = nullptr;	//拾ったゴミカウントのインスタンス
+	int GetCount = 0;
 	//GarbageBase Base;
 };
 

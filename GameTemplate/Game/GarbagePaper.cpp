@@ -37,7 +37,7 @@ void GarbagePaper::NearPlayer()
 	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 500.0f)
 	{
 		GetCount++;
-		m_getGra->Add_ScoreCount(GetCount);
+		m_getGra->Add_GarbageCount(GetCount);
 		DeleteGO(this);
 	}
 }
