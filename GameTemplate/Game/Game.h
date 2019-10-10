@@ -13,6 +13,7 @@ class Player;
 class Score;
 class GetGarbageCount;
 class Stage;
+class Timer;
 
 class Game : public IGameObject
 {
@@ -32,6 +33,7 @@ public:
 	GameCamera* m_gc = nullptr;		//ゲームカメラのインスタンス
 	Player* m_pl = nullptr;			//プレイヤーのインスタンス
 	Score* m_score = nullptr;		//スコアのインスタンス
-	GetGarbageCount* m_getGraCount = nullptr;	//
+	GetGarbageCount* m_getGraCount = nullptr;	//拾ったゴミカウントのインスタンス
+	Timer* m_timer = nullptr;		//タイマーのインスタンス
 };
 

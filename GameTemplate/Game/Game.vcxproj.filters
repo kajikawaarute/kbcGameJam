@@ -37,6 +37,7 @@
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="GetGarbageCount.cpp" />
     <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -53,6 +54,7 @@
     <ClInclude Include="Score.h" />
     <ClInclude Include="GetGarbageCount.h" />
     <ClInclude Include="Stage.h" />
+    <ClInclude Include="Timer.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">

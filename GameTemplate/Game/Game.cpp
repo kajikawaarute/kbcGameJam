@@ -10,7 +10,7 @@
 #include  "Score.h"
 #include "GetGarbageCount.h"
 #include "Stage.h"
-
+#include "Timer.h"
 
 
 Game::Game()
@@ -20,7 +20,7 @@ Game::Game()
 	m_score = NewGO<Score>(0, "score");
 	m_getGraCount = NewGO<GetGarbageCount>(0, "ggc");
 	m_stage = NewGO<Stage>(0, "stage01");
-
+	m_timer = NewGO<Timer>(0, "timer");
 }
 
 
@@ -34,7 +34,9 @@ Game::~Game()
 	DeleteGO(m_score);
 	m_getGraCount = FindGO<GetGarbageCount>("ggc");
 	DeleteGO(m_getGraCount);
-	
+	m_timer = FindGO<Timer>("timer");
+	DeleteGO(m_timer);
+
 	m_stage = FindGO<Stage>("stage01");
 	DeleteGO(m_stage);
 
