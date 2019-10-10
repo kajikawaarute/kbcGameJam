@@ -1813,6 +1813,7 @@
     <MeshContentTask Include="Assets\modelData\da.fbx" />
     <MeshContentTask Include="Assets\modelData\GarbageBox.FBX" />
     <MeshContentTask Include="Assets\modelData\KBCjam Player.fbx" />
+    <MeshContentTask Include="Assets\modelData\KBCjam Stage.FBX" />
     <MeshContentTask Include="Assets\modelData\Paper.FBX" />
     <MeshContentTask Include="Assets\modelData\PetBotol.FBX" />
     <MeshContentTask Include="Assets\modelData\stage.fbx" />
@@ -1852,6 +1853,9 @@
     <CustomBuild Include="Assets\animData\KBCjamPlayer\Player_Gomihiroi.tka">
       <FileType>Document</FileType>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\level\KBCjam_StageLevel.tkl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

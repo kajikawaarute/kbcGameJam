@@ -23,6 +23,7 @@ bool Player::Start()
 	m_animationClip[enAnimationClip_Player_Run].SetLoopFlag(true);
 	m_animationClip[enAnimationClip_Player_Gomihiroi].SetLoopFlag(false);
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
+	m_scale = { 1.5f, 1.5f, 1.5f };
 	m_skinModelRender->Init(L"modelData/KBCjam Player.cmo", m_animationClip, enAnimationClip_num, enFbxUpAxisZ);
 	m_charaCon.Init(50.0f, 90.0f, m_position);
 
@@ -97,6 +98,7 @@ void Player::Update()
 	AnimationController();
 	m_skinModelRender->SetPosition(m_position);
 	m_skinModelRender->SetRotation(m_rotation);
+	m_skinModelRender->SetScale(m_scale);
 }
 
 
