@@ -22,9 +22,9 @@ public:
 	~Game();
 	bool Start();
 	void Update();
-	GarbageBox* m_gabagebox = nullptr;
+	//GarbageBox* m_gabagebox = nullptr;
 	GarbagePaper* m_paper = nullptr;
-	GabageBotol* m_botol = nullptr;
+	//GabageBotol* m_botol = nullptr;
 
 
 	Stage* m_stage = nullptr;
@@ -33,6 +33,8 @@ public:
 	GameCamera* m_gc = nullptr;		//ゲームカメラのインスタンス
 	Player* m_pl = nullptr;			//プレイヤーのインスタンス
 	Score* m_score = nullptr;		//スコアのインスタンス
+	GetGarbageCount* m_getGraCount = nullptr;	//
+	CLevel m_level;                 //レベル
 	GetGarbageCount* m_getGraCount = nullptr;	//拾ったゴミカウントのインスタンス
 	Timer* m_timer = nullptr;		//タイマーのインスタンス
 };
