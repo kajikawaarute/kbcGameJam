@@ -7,6 +7,8 @@ Score::Score()
 
 Score::~Score()
 {
+	DeleteGO(m_font);
+
 }
 
 bool Score::Start()
@@ -21,5 +23,8 @@ void Score::Update()
 {
 	wchar_t text[256];
 	swprintf(text, L"ƒXƒRƒA %d", m_score);
+
 	m_font->SetText(text);
+
+
 }

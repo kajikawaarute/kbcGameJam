@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "Timer.h"
 
+
+
+
+
 Timer::Timer()
 {
 }
@@ -20,10 +24,17 @@ bool Timer::Start()
 
 void Timer::Update()
 {
+	//int getc = 0;
+
 	if (m_timer > 0.5) {
 		m_timer -= GameTime().GetFrameDeltaTime();
 	}
 	wchar_t text[100];
 	swprintf(text, L"Žc‚èŽžŠÔ@%.f", m_timer);
 	m_font->SetText(text);
+
+
+
+
 }
+

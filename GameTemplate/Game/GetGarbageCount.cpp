@@ -1,6 +1,24 @@
 #include "stdafx.h"
 #include "GetGarbageCount.h"
 
+
+
+GetGarbageCount::GetGarbageCount()
+{
+}
+
+GetGarbageCount::~GetGarbageCount()
+{
+
+
+	DeleteGO(m_font);
+
+
+
+
+
+}
+
 bool GetGarbageCount::Start()
 {
 	m_font = NewGO<prefab::CFontRender>(0);
