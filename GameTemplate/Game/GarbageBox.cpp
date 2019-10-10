@@ -25,7 +25,7 @@ void GarbageBox::Update()
 	CVector3 v = m_position - m_pl->GetPos();
 	if (v.Length() < 100 && Pad(0).IsPress(enButtonB) && m_garbageCount->m_GetCount != 0)
 	{
-		m_score->m_score = m_garbageCount->m_GetCount;
+		m_score->m_score += m_garbageCount->m_GetCount;
 		m_garbageCount->m_GetCount = 0;
 	}
 
