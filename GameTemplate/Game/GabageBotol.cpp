@@ -3,6 +3,8 @@
 //#include "GarbageBase.h"
 #include "Player.h"
 #include "GetGarbageCount.h"
+#include "Timer.h"
+
 GabageBotol::GabageBotol()
 {
 
@@ -19,6 +21,7 @@ bool GabageBotol::Start()
 	m_skinModelRender->SetScale(m_scale);
 
 	m_getGra = FindGO<GetGarbageCount>("ggc");
+	m_timer = FindGO<Timer>("timer");
 	//m_position = { 300.0f, 0.0f, 500.0f };
 	//m_skinModelRender->SetScale(m_scale);
 	return true;
@@ -32,7 +35,7 @@ void GabageBotol::NearPlayer()
 	}
 	CVector3 PlGarbage = m_player->m_position - m_position;
 
-	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 150.0f)
+	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 150.0f && m_timer->m_timer >= 0.5f)
 	{
 		//‰¹‚ğÄ¶
 		prefab::CSoundSource* sound = NewGO<prefab::CSoundSource>(0);

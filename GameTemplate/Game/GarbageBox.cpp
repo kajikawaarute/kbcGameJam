@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Score.h"
 #include "GetGarbageCount.h"
+#include "Timer.h"
 
 GarbageBox::~GarbageBox()
 {
@@ -22,6 +23,7 @@ bool GarbageBox::Start()
 	m_pl = FindGO<Player>("pl");
 	m_score = FindGO<Score>("score");
 	m_garbageCount = FindGO<GetGarbageCount>("ggc");
+	m_timer = FindGO<Timer>("timer");
 
 	return true;
 }
@@ -30,7 +32,7 @@ bool GarbageBox::Start()
 void GarbageBox::Update()
 {
 	CVector3 v = m_position - m_pl->GetPos();
-	if (v.Length() < 100 && Pad(0).IsPress(enButtonB) && m_garbageCount->m_GetCount != 0)
+	if (v.Length() < 200 && Pad(0).IsPress(enButtonB) && m_garbageCount->m_GetCount != 0 && m_timer->m_timer >= 0.5f)
 	{
 		//âπÇçƒê∂
 		prefab::CSoundSource* sound = NewGO<prefab::CSoundSource>(0);
