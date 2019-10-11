@@ -35,7 +35,7 @@ void Title1::Update() {
 
 
 
-	/*if (getcount == 0 && y > -320) {
+	if (getcount == 0 && y > -320) {
 		ySpeed += Newton;
 
 	}
@@ -44,37 +44,35 @@ void Title1::Update() {
 	else if (getcount2 == 0) {
 		getcount = 1;
 
-	
 
 
-/*
-		if (bunki == 0) {
-		bunki = 1;*/
-	/*}
-	if (getcount == 1) {
-		ySpeed = 10.0f;
 
-		getcount2 = 1;
+		if (getcount == 1) {
+			ySpeed = 10.0f;
 
-		getcount = 2;
+			getcount2 = 1;
 
+			getcount = 2;
+
+		}
+
+
+		if (getcount2 == 1) {
+			ySpeed -= 0.5f;
+
+
+			x += 10;
+
+		}
+
+
+		y += ySpeed;
+
+		m_position = { x,y };
+
+
+		Font->SetPosition(m_position);
+		Font->SetColor(m_color);
 	}
 
-
-	if (getcount2 == 1) {
-		ySpeed -= 0.5f;
-
-
-		x += 10;
-
-	}
-
-
-	y += ySpeed;
-
-	m_position={ x,y };*/
-
-
-	Font->SetPosition(m_position);
-	Font->SetColor(m_color);
 }
