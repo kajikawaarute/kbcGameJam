@@ -4,6 +4,7 @@
 #include "Player.h"
 //#include "Score.h"
 #include "GetGarbageCount.h"
+#include "Timer.h"
 
 GarbagePaper::GarbagePaper()
 {
@@ -18,6 +19,7 @@ bool GarbagePaper::Start()
 {
 	//m_score = FindGO<Score>("score");
 	m_getGra = FindGO<GetGarbageCount>("ggc");
+	m_timer = FindGO<Timer>("timer");
 
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/Paper.cmo");
@@ -34,7 +36,7 @@ void GarbagePaper::NearPlayer()
 	}
 	CVector3 PlGarbage = m_player->m_position - m_position;
 
-	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 150.0f)
+	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 150.0f && m_timer->m_timer >= 0.5f)
 	{
 		//âπÇçƒê∂
 		prefab::CSoundSource* sound = NewGO<prefab::CSoundSource>(0);

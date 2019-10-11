@@ -3,6 +3,7 @@
 class Player;
 class Score;
 class GetGarbageCount;
+class Timer;
 class GarbageBox : public IGameObject
 {
 public:
@@ -24,4 +25,5 @@ public:
 	Player* m_pl = nullptr;		//プレイヤーのインスタンス
 	Score* m_score = nullptr;	//スコアのインスタンス
 	GetGarbageCount* m_garbageCount; //拾ったゴミカウントのインスタンス
+	Timer* m_timer = nullptr;		//タイマーのインスタンス
 };

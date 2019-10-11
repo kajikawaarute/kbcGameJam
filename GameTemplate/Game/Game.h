@@ -39,6 +39,7 @@ public:
 	prefab::CDirectionLight* m_dirLight = nullptr;		//ディレクションライトのインスタンス
 	prefab::CDirectionLight* m_dirLight2 = nullptr;		//ディレクションライト2のインスタンス
 	prefab::CSoundSource* m_sound = nullptr;
+	prefab::CSoundSource* m_timeSound = nullptr;
 	prefab::CSpriteRender* m_sprite = nullptr;
 	bool m_clearFlag = false;
 	int m_time = 0.0f;

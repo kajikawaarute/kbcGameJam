@@ -1,4 +1,5 @@
 #pragma once
+#include "tkEngine/camera/tkSpringCamera.h"
 
 class Player;
 class GameCamera : public IGameObject
@@ -13,5 +14,6 @@ public:
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_Target = CVector3::Zero;
 	Player* m_pl = nullptr;			//プレイヤーのインスタンス
+	CSpringCamera m_spCamera;
 };
 

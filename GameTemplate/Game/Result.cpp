@@ -25,6 +25,7 @@ Result::~Result()
 	DeleteGO(Font8);*/
 	DeleteGO(m_spriterender4);
 
+	DeleteGO(m_sound);
 
 }
 
@@ -136,7 +137,9 @@ CVector3 efPos = m_position;
 efPos.y = 50.0f;
 m_ef->SetPosition(efPos);
 
-
+	m_sound = NewGO<prefab::CSoundSource>(0);
+	m_sound->Init(L"sound/GameClear.wav");
+	m_sound->Play(true);
 
 return true;
 
