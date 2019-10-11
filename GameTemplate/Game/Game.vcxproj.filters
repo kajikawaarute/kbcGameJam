@@ -43,6 +43,8 @@
     <ClCompile Include="Result.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="GabageGenerator.cpp" />
+    <ClCompile Include="FontMove.cpp" />
+    <ClCompile Include="Title1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -62,6 +64,8 @@
     <ClInclude Include="Timer.h" />
     <ClInclude Include="GabageGenerator.h" />
     <ClInclude Include="Result.h" />
+    <ClInclude Include="FontMove.h" />
+    <ClInclude Include="Title1.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -133,6 +137,12 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\GAMESTARTsound.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\game_maoudamashii_4_field11.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\Titlesounds.wav">
       <Filter>Assets\sound</Filter>
     </Media>
   </ItemGroup>

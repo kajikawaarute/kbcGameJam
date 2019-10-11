@@ -67,12 +67,21 @@ return true;
 void Result::Update() {
 
 
-	x += 10;
+	
+
+	if (x<0)
+	{
+
+x += 10;
+
+	}
 
 
 	m_position1= { x,y /*0.0f,0.0f */ };
 
 	Font1->SetPosition(m_position1);
+	Font1->SetScale(scale);
+	Font1->SetColor(Setcolor);
 
 
 

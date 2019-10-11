@@ -1762,6 +1762,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FontMove.cpp" />
     <ClCompile Include="GabageBotol.cpp" />
     <ClCompile Include="GabageGenerator.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -1796,8 +1797,10 @@
     </ClCompile>
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Title.cpp" />
+    <ClCompile Include="Title1.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FontMove.h" />
     <ClInclude Include="GabageBotol.h" />
     <ClInclude Include="GabageGenerator.h" />
     <ClInclude Include="Game.h" />
@@ -1813,6 +1816,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Title.h" />
+    <ClInclude Include="Title1.h" />
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
@@ -1843,6 +1847,8 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\GAMESTARTsound.wav" />
+    <Media Include="Assets\sound\game_maoudamashii_4_field11.wav" />
+    <Media Include="Assets\sound\Titlesounds.wav" />
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\plse.png" />
