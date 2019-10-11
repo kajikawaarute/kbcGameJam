@@ -22,8 +22,11 @@ bool GameCamera::Start()
 	//m_toCameraPos.Set(0.0f, 250.0f, -400.0f);
 	m_toCameraPos.Set(0.0f, 270.0f, -800.0f);
 	m_pl = FindGO<Player>("pl");
-	MainCamera().SetNear(10.0f);
-	MainCamera().SetFar(10000.0f);
+	/*MainCamera().SetNear(10.0f);
+	MainCamera().SetFar(10000.0f);*/
+
+	//‚Î‚ËƒJƒƒ‰‚Ì‰Šú‰»
+	m_spCamera.Init(MainCamera(), 1000.0f, true, 5.0f);
 
 
 	return true;
@@ -64,7 +67,11 @@ void GameCamera::Update()
 	//‹“_
 	m_position = m_Target + m_toCameraPos;
 
-	MainCamera().SetTarget(m_Target);
+	/*MainCamera().SetTarget(m_Target);
 	MainCamera().SetPosition(m_position);
-	MainCamera().Update();
+	MainCamera().Update();*/
+
+	m_spCamera.SetTarget(m_Target);
+	m_spCamera.SetPosition(m_position);
+	m_spCamera.Update();
 }
