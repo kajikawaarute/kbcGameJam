@@ -32,6 +32,11 @@ void GarbageBox::Update()
 	CVector3 v = m_position - m_pl->GetPos();
 	if (v.Length() < 100 && Pad(0).IsPress(enButtonB) && m_garbageCount->m_GetCount != 0)
 	{
+		//‰¹‚ğÄ¶
+		prefab::CSoundSource* sound = NewGO<prefab::CSoundSource>(0);
+		sound->Init(L"sound/GetGarbageBox.wav");
+		sound->Play(false);
+
 		m_score->m_score += m_garbageCount->m_GetCount;
 		m_garbageCount->m_GetCount = 0;
 	}

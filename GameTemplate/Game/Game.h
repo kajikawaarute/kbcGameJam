@@ -38,8 +38,11 @@ public:
 	Timer* m_timer = nullptr;		//タイマーのインスタンス
 	prefab::CDirectionLight* m_dirLight = nullptr;		//ディレクションライトのインスタンス
 	prefab::CDirectionLight* m_dirLight2 = nullptr;		//ディレクションライト2のインスタンス
+	prefab::CSoundSource* m_sound = nullptr;
+	prefab::CSpriteRender* m_sprite = nullptr;
 	bool m_clearFlag = false;
-	float m_time = 0.0f;
+	int m_time = 0.0f;
+	int m_time2 = 0.0f;
 
 };
 
