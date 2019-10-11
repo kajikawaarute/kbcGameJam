@@ -13,6 +13,7 @@ public:
 	}
 
 	prefab::CFontRender* m_font = nullptr;
+	prefab::CSpriteRender* m_sprite = nullptr;
 	int m_GetCount = 0;
 };
 

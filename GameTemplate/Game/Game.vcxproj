@@ -1846,9 +1846,12 @@
     <ImageContentTask Include="Assets\sprite\GameStart.png" />
   </ItemGroup>
   <ItemGroup>
+    <Media Include="Assets\sound\GameBGM.wav" />
     <Media Include="Assets\sound\GAMESTARTsound.wav" />
     <Media Include="Assets\sound\game_maoudamashii_4_field11.wav" />
     <Media Include="Assets\sound\Titlesounds.wav" />
+    <Media Include="Assets\sound\GetGarbage.wav" />
+    <Media Include="Assets\sound\GetGarbageBox.wav" />
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\plse.png" />
@@ -1873,6 +1876,13 @@
     <None Include="Assets\effect\fubuki.efk" />
     <None Include="Assets\effect\fucukikai.efk" />
     <None Include="Assets\level\KBCjam_StageLevel.tkl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\gomi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\gomibako.png" />
+    <ImageContentTask Include="Assets\sprite\timeUp.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

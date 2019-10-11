@@ -15,7 +15,7 @@ bool GabageBotol::Start()
 {
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/PetBotol.cmo");
-	m_position = { 300.0f, 0.0f, 500.0f };
+	//m_position = { 300.0f, 0.0f, 500.0f };
 	m_skinModelRender->SetScale(m_scale);
 
 	m_getGra = FindGO<GetGarbageCount>("ggc");
@@ -32,8 +32,13 @@ void GabageBotol::NearPlayer()
 	}
 	CVector3 PlGarbage = m_player->m_position - m_position;
 
-	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 500.0f)
+	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 150.0f)
 	{
+		//‰¹‚ðÄ¶
+		prefab::CSoundSource* sound = NewGO<prefab::CSoundSource>(0);
+		sound->Init(L"sound/GetGarbage.wav");
+		sound->Play(false);
+
 		GetCount++;
 		m_getGra->Add_GarbageCount(GetCount);
 		DeleteGO(this);

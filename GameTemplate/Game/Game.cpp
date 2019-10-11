@@ -87,7 +87,8 @@ Game::~Game()
 	DeleteGO(m_stage);
 
 	DeleteGO(m_dirLight);
-
+	DeleteGO(m_sound);
+	DeleteGO(m_sprite);
 	//Title* TL = FindGO<Title>("Title1");
 	//DeleteGO(TL);
 
@@ -100,7 +101,13 @@ Game::~Game()
 }
 bool Game::Start()
 {
+	m_sound = NewGO<prefab::CSoundSource>(0);
+	m_sound->Init(L"sound/GameBGM.wav");
+	m_sound->Play(true);
 
+	/*m_sprite = NewGO<prefab::CSpriteRender>(0);
+	m_sprite->Init(L"sprite/timeUp.dds", 1200, 780);
+	m_sprite->SetPosition(CVector3::Zero);*/
 	//m_paper = NewGO<GarbagePaper>(0, "Paper");
 	//m_gabagebox = NewGO<GarbageBox>(0, "GarbageBox");
 	//m_botol = NewGO<GabageBotol>(0, "Botol");
@@ -109,14 +116,32 @@ bool Game::Start()
 
 void Game::Update()
 {
-	if (m_timer->m_timer <= 0.5) {
-		m_clearFlag = true;
+	///*if (m_timer->m_timer <= 0.5) {
+	//	m_clearFlag = true;
 
 
+	//}
+
+	//if (m_clearFlag==true) {
+	//	NewGO<Result>(0);
+	//	DeleteGO(this);*/
+	//}
+	if (m_clearFlag == false){
+		if (m_timer->m_timer <= 0.5){
+			m_time++;
+			m_time2++;
+			if (m_time == 60)
+			{
+				m_sprite = NewGO<prefab::CSpriteRender>(0);
+				m_sprite->Init(L"sprite/timeUp.dds", 1200, 780);
+				m_sprite->SetPosition(CVector3::Zero);
+			}
+			if (m_time2 == 120) {
+				NewGO<Result>(0);
+				DeleteGO(this);
+			}
+		}
 	}
 
-	if (m_clearFlag==true) {
-		NewGO<Result>(0);
-		DeleteGO(this);
-	}
+
 }
