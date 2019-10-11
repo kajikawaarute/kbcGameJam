@@ -11,6 +11,7 @@ public:
 	prefab::CSpriteRender* m_spriterender1 = nullptr;
 	prefab::CSpriteRender* m_spriterender2 = nullptr;
 
+	prefab::CSoundSource* m_sound = nullptr;
 
 	//fontseikou
 	Score* m_score = nullptr;
