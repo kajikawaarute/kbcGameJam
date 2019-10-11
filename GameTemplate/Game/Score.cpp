@@ -25,7 +25,7 @@ bool Score::Start()
 void Score::Update()
 {
 	wchar_t text[256];
-	swprintf(text, L"スコア %d", m_score);
+	swprintf(text, L"捨てたゴミ %d", m_score);
 
 	m_font->SetText(text);
 
