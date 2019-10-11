@@ -41,6 +41,20 @@ void GabageGenerator::Update()
 		paper->m_position.z = CMath::Lerp(PaperT, -2800.0f, 2800.0f);
 		paper->m_position.y = 20.0f;
 		paper->m_scale = { 5.0f,5.0f,5.0f };
+
+
+		GarbagePaper* paper2 = NewGO<GarbagePaper>(0, "Paper2");
+		//X座標をランダムにする。
+		//GetRandDoubleは0.0～1.をランダムに返してくる関数。
+		float Paper2S = Random().GetRandDouble();
+		paper2->m_position.x = CMath::Lerp(Paper2S, -3500.0f, 100.0f);
+		//Z座標をランダムにする。
+		//GetRandDoubleは0.0～1.をランダムに返してくる関数。
+		float Paper2T = Random().GetRandDouble();
+		//CMath::Leap関数は二つの値の間を線形補完する関数。
+		paper2->m_position.z = CMath::Lerp(Paper2T, 100.0f, 3500.0f);
+		paper2->m_position.y = 350.0f;
+		paper2->m_scale = { 5.0f,5.0f,5.0f };
 		m_timer = 0;  //タイマーをリセット
 	}
 }
