@@ -29,7 +29,7 @@ Game::Game()
 	m_dirLight->SetColor({ 1000.0f, 1000.0f, 1000.0f, 1.0f });
 	GraphicsEngine().GetShadowMap().SetLightDirection({ 1.0f, 0.0f, 1.0f });
 
-	m_dirLight2->SetDirection({ 0.707f, 0.707f, -0.707f });
+	m_dirLight2->SetDirection({ 1.077f, 0.707f, -0.707f });
 	m_dirLight2->SetColor({ 1000.0f, 1000.0f, 1000.0f, 1.0f });
 	GraphicsEngine().GetShadowMap().SetLightDirection({ 0.0f, 1.0f, 0.0f });
 
@@ -97,6 +97,7 @@ Game::~Game()
 	DeleteGOs("GarbageBox");
 	DeleteGOs("Botol");
 	DeleteGOs("Paper");
+	DeleteGOs("Paper2");
 	DeleteGOs("Generator");
 }
 bool Game::Start()
