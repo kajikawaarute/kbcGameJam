@@ -1850,6 +1850,7 @@
     <Media Include="Assets\sound\GameClear.wav" />
     <Media Include="Assets\sound\GAMESTARTsound.wav" />
     <Media Include="Assets\sound\game_maoudamashii_4_field11.wav" />
+    <Media Include="Assets\sound\timeup.wav" />
     <Media Include="Assets\sound\Titlesounds.wav" />
     <Media Include="Assets\sound\GetGarbage.wav" />
     <Media Include="Assets\sound\GetGarbageBox.wav" />

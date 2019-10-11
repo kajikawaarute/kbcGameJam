@@ -72,7 +72,7 @@ void Player::Move()
 	cameraRight.Normalize();
 
 	m_moveSpeed.x = 0;
-	m_moveSpeed.y -= 30.0f;
+	m_moveSpeed.y -= 100.0f;
 	m_moveSpeed.z = 0;
 
 	m_moveSpeed += cameraFoward * LStick_y;

@@ -136,8 +136,12 @@ void Game::Update()
 				m_sprite = NewGO<prefab::CSpriteRender>(0);
 				m_sprite->Init(L"sprite/timeUp.dds", 1200, 780);
 				m_sprite->SetPosition(CVector3::Zero);
+
+				m_timeSound = NewGO<prefab::CSoundSource>(0);
+				m_timeSound->Init(L"sound/timeup.wav");
+				m_timeSound->Play(false);
 			}
-			if (m_time2 == 120) {
+			if (m_time2 == 300) {
 				NewGO<Result>(0);
 				DeleteGO(this);
 			}

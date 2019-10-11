@@ -166,6 +166,9 @@
     <Media Include="Assets\sound\GameClear.wav">
       <Filter>Assets\sound</Filter>
     </Media>
+    <Media Include="Assets\sound\timeup.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\level\KBCjam_StageLevel.tkl">
