@@ -72,7 +72,7 @@ void Player::Move()
 	cameraRight.Normalize();
 
 	m_moveSpeed.x = 0;
-	m_moveSpeed.y -= 20.0f;
+	m_moveSpeed.y -= 30.0f;
 	m_moveSpeed.z = 0;
 
 	m_moveSpeed += cameraFoward * LStick_y;
@@ -80,7 +80,7 @@ void Player::Move()
 
 	if (Pad(0).IsTrigger(enButtonX))
 	{
-		m_moveSpeed.y += 400.0f;
+		m_moveSpeed.y += 600.0f;
 	}
 
 	m_position = m_charaCon.Execute(m_moveSpeed, GameTime().GetFrameDeltaTime());
