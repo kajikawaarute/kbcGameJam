@@ -129,6 +129,9 @@
     <ImageContentTask Include="Assets\sprite\timeUp.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\shousan.jpg">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Assets\effect\fa.efk">

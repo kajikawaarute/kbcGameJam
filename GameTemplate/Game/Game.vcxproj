@@ -1886,6 +1886,9 @@
     <ImageContentTask Include="Assets\sprite\gomibako.png" />
     <ImageContentTask Include="Assets\sprite\timeUp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\shousan.jpg" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.targets" />
