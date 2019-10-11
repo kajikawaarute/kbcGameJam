@@ -71,7 +71,7 @@ prefab::CSpriteRender* m_spriterender4 = nullptr;
 	CVector2 FontMove(float a,float b);
 	//1
 
-	float ex = 0;
+	float ex = -500;
 	float ey = 400;
 	float yT = 0;
 	float ySpeed = 0.0f;
@@ -85,8 +85,8 @@ prefab::CSpriteRender* m_spriterender4 = nullptr;
 
 	int getcount2 = 0;
 	//2
-	float ex1 = 0;
-	float ey1 = 400;
+	float ex1 = -500;
+	float ey1 = 200;
 	float yT1 = 0;
 	float ySpeed1 = 0.0f;
 	float Newton1 = -0.5f;
