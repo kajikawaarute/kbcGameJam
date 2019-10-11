@@ -34,7 +34,7 @@ void GarbagePaper::NearPlayer()
 	}
 	CVector3 PlGarbage = m_player->m_position - m_position;
 
-	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 500.0f)
+	if (Pad(0).IsTrigger(enButtonA) && PlGarbage.Length() < 400.0f)
 	{
 		GetCount++;
 		m_getGra->Add_GarbageCount(GetCount);
